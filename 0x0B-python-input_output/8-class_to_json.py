@@ -4,8 +4,4 @@
 
 def class_to_json(obj):
     """Return the dictionary represntation of a simple data structure."""
-    json_dict = {}
-    for attr, value in obj._dict_.items():
-        if isinstance(value,(list,dict, str, int, bool)):
-            json_dict[attr] = value
-    return json_dict
+    return obj.__dict__
